@@ -57,6 +57,7 @@ const Editor = ({ onChange, name, value, disabled }) => {
           newValue = `${newValue}${imgTag}`;
         }
       } else if (asset.mime.includes("video")) {
+	  console.log("VIDEO")
 	  const imgTag = `<video src="${asset.url}" alt="${asset.alt}" class="embed-video" controls=""></video>`;
           newValue = `${newValue}${imgTag}`;    
       }
