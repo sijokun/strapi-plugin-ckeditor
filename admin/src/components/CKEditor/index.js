@@ -56,6 +56,9 @@ const Editor = ({ onChange, name, value, disabled }) => {
           const imgTag = `<img src="${asset.url}" alt="${asset.alt}"></img>`;
           newValue = `${newValue}${imgTag}`;
         }
+      } else if (asset.mime.includes("video")) {
+	  const imgTag = `<video src="${asset.url}" alt="${asset.alt}" class="embed-video" controls=""></video>`;
+          newValue = `${newValue}${imgTag}`;    
       }
       // Handle videos and other type of files by adding some code
     });
